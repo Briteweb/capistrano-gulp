@@ -5,6 +5,7 @@ desc <<-DESC
 
     You can override any of these defaults by setting the variables shown below.
 
+      set :gulp_executable, 'gulp'
       set :gulp_file, nil
       set :gulp_tasks, nil
       set :gulp_flags, '--no-color'
@@ -21,7 +22,7 @@ task :gulp do
       options << "--gulpfile #{fetch(:gulp_file)}" if fetch(:gulp_file)
       options << fetch(:gulp_tasks) if fetch(:gulp_tasks)
 
-      execute :gulp, options
+      execute fetch(:gulp_executable), options
     end
   end
 end
@@ -32,6 +33,7 @@ end
 
 namespace :load do
   task :defaults do
+    set :gulp_executable, 'gulp'
     set :gulp_file, nil
     set :gulp_tasks, nil
     set :gulp_flags, '--no-color'

@@ -1,6 +1,6 @@
 # Capistrano::Gulp
 
-This gem will let you run [Gulp](http://gulptjs.com/) tasks with Capistrano 3.x.
+This gem will let you run [Gulp](http://gulpjs.com/) tasks with Capistrano 3.x.
 
 ## Installation
 
@@ -49,7 +49,7 @@ gulp deploy:production cdn
 Then add the task to your `deploy.rb`:
 
 ```ruby
-before :updated, 'gulp'
+before 'deploy:updated', 'gulp'
 ```
 
 ## Configuration

@@ -49,7 +49,9 @@ gulp deploy:production cdn
 Then add the task to your `deploy.rb`:
 
 ```ruby
-before :updated, 'gulp'
+namespace :deploy do
+  before :updated, 'gulp'
+end
 ```
 
 ## Configuration

@@ -1,6 +1,6 @@
 # Capistrano::Gulp
 
-This gem will let you run [Gulp](http://gulptjs.com/) tasks with Capistrano 3.x.
+This gem will let you run [Gulp](http://gulpjs.com/) tasks with Capistrano 3.x.
 
 ## Installation
 

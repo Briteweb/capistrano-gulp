@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'capistrano-gulp'
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.authors       = ['Alessandro Biavati']
   spec.email         = ['abiavati@gmail.com']
   spec.description   = %q{Gulp support for Capistrano 3.x}

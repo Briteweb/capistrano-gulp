@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```bash
 gem 'capistrano', '~> 3.0'
-gem 'capistrano-gulp', "~> 0.0.1"
+gem 'capistrano-gulp', "~> 0.0.2"
 ```
 
 And then execute:

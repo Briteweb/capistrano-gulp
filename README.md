@@ -70,6 +70,7 @@ set :gulp_tasks, nil                                      # default
 set :gulp_flags, '--no-color'                             # default
 set :gulp_roles, :all                                     # default
 set :gulp_target_path, -> { release_path.join('subdir') } # default not set
+set :gulp_link, nil                                       # default
 ```
 
 ## Contributing

@@ -11,6 +11,7 @@ desc <<-DESC
       set :gulp_flags, '--no-color'
       set :gulp_target_path, nil
       set :gulp_roles, :all
+      set :gulp_links, nil
 DESC
 task :gulp do
   on roles fetch(:gulp_roles) do
@@ -22,6 +23,7 @@ task :gulp do
       options << "--gulpfile #{fetch(:gulp_file)}" if fetch(:gulp_file)
       options << fetch(:gulp_tasks) if fetch(:gulp_tasks)
 
+      execute 'npm', 'link', fetch(:gulp_links) if fetch(:gulp_links)
       execute fetch(:gulp_executable), options
     end
   end
@@ -38,5 +40,6 @@ namespace :load do
     set :gulp_tasks, nil
     set :gulp_flags, '--no-color'
     set :gulp_roles, :all
+    set :gulp_links, nil
   end
 end
